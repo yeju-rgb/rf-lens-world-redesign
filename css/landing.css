@@ -1,0 +1,70 @@
+/* 랜딩 다크 — 1rem = 디자인 10px. 수치는 원본 통이미지(1146px 폭)에서 잰 값을 1920 기준으로 환산했다. */
+.page-landing { background: #0f0f0f; }
+.top--dark { height: 0; background: none; }
+.top--dark .gnb { top: 3.7rem; background: #000; }
+.wordmark--light { top: 34.8rem; color: #fff; }
+
+.land { position: relative; height: 632.1rem; background: #0f0f0f; overflow: hidden; }
+.land > * { position: absolute; }
+.land > .gridlines { top: 0; }
+.glow--land { left: 110rem; top: 40rem; width: 110rem; height: 60rem; background: radial-gradient(closest-side, rgba(150,110,70,.34), rgba(90,70,50,.14) 55%, transparent); transform: translate(calc(var(--dx, 0) * 12rem), calc(var(--dy, 0) * 8rem)) rotate(calc(-20deg + var(--dx, 0) * 12deg)); }
+.feat__en, .feat__ko { transition: color .3s; }
+.feat:hover .feat__en, .feat:hover .feat__ko { color: #8a8a8a; }
+.land__lens, .land__camera { transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .5s; }
+.land__lens:hover, .land__camera:hover { transform: scale(1.015); filter: brightness(1.08); }
+.land__camera { left: 73.7rem; top: 60rem; width: 43.5rem; height: 85.6rem; }
+
+.btn-red {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14.4rem; height: 4.9rem;
+  background: var(--main); color: #fff;
+  border-radius: 2.5rem;
+  font-size: 2rem; font-weight: 500; letter-spacing: -0.02rem;
+  transition: background .2s, transform .2s;
+}
+.btn-red:hover { background: #d40000; transform: translateY(-0.2rem); }
+.btn-red--sm { width: 12.1rem; height: 4.5rem; font-size: 1.5rem; }
+.land__more1 { left: 162.5rem; top: 212.6rem; }
+.land__more2 { left: 87.6rem; top: 616.2rem; }
+
+/* 캐러셀 */
+.car { left: 15.1rem; top: 169.2rem; width: 161.8rem; height: 40.9rem; background: #131211; }
+.car__track { position: absolute; inset: 0; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.car__item { position: absolute; top: 1.8rem; height: 33.5rem; overflow: hidden; }
+.car__item img { transition: transform .6s, filter .4s; }
+.car__item:hover img { transform: scale(1.04); filter: brightness(1.1); }
+.car__item:nth-child(1) { left: 0; width: 34.7rem; top: 7rem; height: 23.1rem; }
+.car__item:nth-child(2) { left: 35.4rem; width: 21.9rem; background: #fff; }
+.car__item:nth-child(3) { left: 58rem; width: 22.1rem; }
+.car__item:nth-child(4) { left: 80.8rem; width: 26.5rem; }
+.car__item:nth-child(5) { left: 108.1rem; width: 26.3rem; }
+.car__item:nth-child(6) { left: 135rem; width: 26.8rem; }
+.car__ticks { position: absolute; left: 0; right: 0; top: 37.2rem; display: flex; justify-content: center; gap: 1.5rem; }
+.car__ticks button { width: 0.6rem; height: 1.6rem; position: relative; }
+.car__ticks button::before { content: ""; position: absolute; left: 50%; top: 0.3rem; width: 1px; height: 1rem; background: #8a8a8a; transition: background .2s, transform .2s; }
+.car__ticks button.is-on::before { background: var(--main); width: 2px; }
+.car__ticks button:hover::before { transform: scaleY(1.4); }
+
+/* 기능 소개 */
+.feat { color: #fff; }
+.feat h2 { font-family: "Poppins", sans-serif; font-weight: 300; font-size: 6.4rem; line-height: 7rem; letter-spacing: -0.01em; white-space: nowrap; }
+.feat__en { margin-top: 2.2rem; font-size: 1.6rem; line-height: 2.4rem; color: #5e5e5e; white-space: nowrap; }
+.feat__line { display: block; margin: 1.9rem 0 0; border: 0; height: 1px; background: #4a1616; }
+.feat__line--red { background: var(--main); }
+.feat__ko { margin-top: 3rem; font-size: 1.6rem; line-height: 2.4rem; color: #5e5e5e; white-space: nowrap; }
+.feat .btn-red { margin-top: 2.6rem; }
+.feat--a { left: 15.1rem; top: 236.4rem; width: 79.7rem; }
+.feat--b { left: 97rem; top: 336.4rem; width: 79.9rem; }
+.feat--c { left: 15.1rem; top: 456rem; width: 159.7rem; }
+.land__lens--a { left: 98.8rem; top: 252.5rem; width: 84.4rem; height: 55.1rem; }
+.land__lens--b { left: 0; top: 356.7rem; width: 82.2rem; height: 69rem; }
+.land__lens--c { left: 37.2rem; top: 517.9rem; width: 115.9rem; height: 45.7rem; }
+
+/* 흰 카드 3장 */
+.cards { left: 15.1rem; top: 585.7rem; display: grid; grid-template-columns: repeat(3, 52.6rem); gap: 0.9rem; }
+.cards li { position: relative; height: 26.5rem; padding: 5rem 2rem 0; background: #f9f9f9; border-radius: 1.2rem; color: #1a1a1a; transition: transform .3s; }
+.cards li:hover { transform: translateY(-0.6rem); }
+.cards h3 { font-size: 2rem; font-weight: 400; line-height: 2.6rem; }
+.cards__sub { margin-top: 0.8rem; font-size: 1.6rem; line-height: 2.1rem; color: #333; }
+.cards__sub::after { content: ""; display: block; margin-top: 1.5rem; height: 1px; background: #d23a3a; }
+.cards__ko { margin-top: 1.4rem; font-size: 1.25rem; line-height: 1.8rem; color: #777; white-space: nowrap; }

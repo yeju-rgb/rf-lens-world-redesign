@@ -1,0 +1,10 @@
+/* 시안에 없는 화면용 안내 — 검은 배경, Pretendard */
+.page-soon { background: #000; color: #fff; font-family: "Pretendard", -apple-system, "Apple SD Gothic Neo", sans-serif; }
+.top--soon { height: 0; background: none; }
+.top--soon .gnb { top: 3.2rem; background: #111; }
+.soon { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.soon h1 { font-size: 9.6rem; font-weight: 700; line-height: 1; letter-spacing: 0.02em; }
+.soon p { margin-top: 2.8rem; font-size: 2.4rem; font-weight: 400; color: #8a8a8a; }
+.soon__back { margin-top: 5.6rem; display: inline-flex; align-items: center; justify-content: center; height: 5.6rem; padding: 0 3.6rem; border: 1px solid #5a5a5a; border-radius: 2.8rem; font-size: 2rem; font-weight: 500; color: #d0d0d0; transition: color .2s, border-color .2s; }
+.soon__back:hover { color: #fff; border-color: #fff; }
+.soon__note { position: fixed; left: 0; right: 0; bottom: 3.2rem; text-align: center; font-size: 1.3rem; color: #6a6a6a; }

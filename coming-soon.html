@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Coming Soon — RF LENS WORLD 리디자인 시안 (개인 포트폴리오)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/coming-soon.css">
+</head>
+<body class="page-soon">
+<span class="light" aria-hidden="true"></span>
+
+<header class="top top--soon">
+  <nav class="gnb" aria-label="주요 메뉴">
+    <a class="gnb__logo" href="index.html">RF LENS WORLD</a>
+    <ul class="gnb__menu">
+      <li><a href="landing.html">R 시스템</a></li>
+      <li><a href="atelier.html">렌즈의 세계</a></li>
+      <li><a href="coming-soon.html">렌즈 추천</a></li>
+      <li><a href="coming-soon.html">글로벌 프로페셔널즈</a></li>
+      <li><a href="coming-soon.html">이벤트</a></li>
+      <li><a href="coming-soon.html">스토리</a></li>
+      <li><a href="coming-soon.html">커뮤니티</a></li>
+    </ul>
+    <ul class="gnb__util">
+      <li><a href="coming-soon.html">브랜드</a></li>
+      <li><a href="coming-soon.html">e스토어</a></li>
+      <li><a class="gnb__quest" href="index.html#quest">RF 렌즈 퀘스트</a></li>
+      <li><a href="coming-soon.html">마이페이지</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="soon">
+  <h1>COMING SOON</h1>
+  <p>준비 중인 화면입니다</p>
+  <a class="soon__back" href="index.html" data-back>돌아가기</a>
+</main>
+<p class="soon__note">Unofficial redesign concept · 개인 포트폴리오용 리디자인 작업이며 Canon과 무관합니다</p>
+
+<script src="js/main.js"></script>
+<script>
+  // 이전 화면이 있으면 그곳으로 돌아간다
+  document.querySelector('[data-back]').addEventListener('click', function (e) {
+    if (history.length > 1 && document.referrer) { e.preventDefault(); history.back(); }
+  });
+</script>
+</body>
+</html>

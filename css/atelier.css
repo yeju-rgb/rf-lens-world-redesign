@@ -1,0 +1,104 @@
+/* ATELIER 렌즈 라인업 · 공통 보조 — 1rem = 디자인 10px. 원본 통이미지(1469px 폭)에서 잰 값을 1920 기준으로 환산했다. */
+.top--over { height: 0; background: none; }
+.top--over .gnb { top: 3.2rem; }
+.btn-line {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 5.6rem; padding: 0 3.2rem;
+  border: 1px solid #8a8a8a; border-radius: 2.8rem;
+  color: #9a9a9a; font-size: 2rem; font-weight: 500;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.btn-line:hover { color: #fff; border-color: #fff; }
+
+/* 히어로: 왼쪽 절반은 유리(흐림), 오른쪽은 선명 */
+.ahero { position: relative; height: 103.6rem; overflow: hidden; background: #2a2f3a; }
+.ahero__blur {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 95rem;
+  -webkit-backdrop-filter: blur(3rem); backdrop-filter: blur(3rem);
+  background: rgba(190,170,150,.10);
+  border-right: 1px solid rgba(255,255,255,.12);
+  transition: width .5s cubic-bezier(.2,.7,.2,1);
+}
+.ahero__title {
+  position: absolute; left: 21rem; top: 74.6rem;
+  font-family: "Playfair Display", "Times New Roman", serif; font-weight: 400;
+  font-size: 15rem; line-height: 1; color: #fff;
+}
+.ahero__title span { display: inline-block; transform-origin: left center; white-space: nowrap; }
+.ahero__sub {
+  position: absolute; left: 131.4rem; top: 66.2rem;
+  font-family: "Poppins", sans-serif; font-weight: 300;
+  font-size: 4rem; line-height: 1.3; letter-spacing: 0.42em; word-spacing: 0.3em; color: #fff;
+}
+
+.abody { position: relative; height: 431.7rem; background: #1c1c1c; overflow: hidden; }
+.abody > * { position: absolute; }
+.lc__photo img, .abig img { transition: filter .4s; }
+.lc__photo:hover img, .abig:hover img { filter: brightness(1.07); }
+.aside__pill { transition: background .25s; }
+.aside__pill:hover { background: #000; }
+.aglow { transform: translate(calc(var(--dx, 0) * 10rem), calc(var(--dy, 0) * 7rem)); left: -46rem; top: 12rem; width: 80rem; height: 56rem; background: radial-gradient(closest-side, rgba(120,116,80,.55), rgba(60,70,60,.25) 60%, transparent); }
+
+.aside { left: 14.9rem; top: 21.8rem; width: 40rem; }
+.aside__pill { display: inline-flex; align-items: center; height: 6.5rem; padding: 0 2.7rem; background: #111; border-radius: 3.3rem; color: #e9e9e9; font-size: 2.6rem; font-weight: 400; letter-spacing: -0.02rem; }
+.aside__pill--body { position: absolute; left: 0; top: 75.6rem; }
+.aside__list { margin-top: 4.9rem; }
+.aside__list li + li { margin-top: 3.1rem; }
+.aside__list button { display: block; position: relative; padding-left: 7rem; text-align: left; font-size: 2.45rem; line-height: 3.6rem; font-weight: 500; color: #6a6a6a; transition: color .2s; }
+.aside__list b { position: absolute; left: 0; top: 0; font-size: 2rem; font-weight: 500; color: #5a5a5a; transition: color .2s; }
+.aside__list button:hover { color: #aaa; }
+.aside__list button.is-on { color: #f1f1f1; font-weight: 600; }
+.aside__list button.is-on b { color: var(--main); }
+.aside__list button.is-on b::after { content: ""; position: absolute; right: -0.9rem; top: 0.4rem; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--main); }
+
+/* 렌즈 카드 */
+.lcs { left: 83.2rem; top: 0; width: 93.8rem; height: 300rem; }
+.lc { position: absolute; left: 0; right: 0; height: 36.9rem; transition: opacity .35s, transform .35s; }
+.lc.is-out { opacity: 0; transform: translateY(1.6rem); }
+.lc--r1 { top: 19.9rem; } .lc--r2 { top: 64.6rem; } .lc--r3 { top: 109.7rem; height: 34.4rem; } .lc--r4 { top: 152rem; }
+.lc__lens, .lc__photo { position: absolute; top: 0; bottom: 0; overflow: hidden; }
+.lc__lens { background: #2c2c2c; }
+.lc__lens img { height: auto; object-fit: contain; transition: transform .5s; }
+.lc__lens:hover img { transform: scale(1.05); }
+.lc--lensfirst .lc__lens { left: 0; width: 36.6rem; } .lc--lensfirst .lc__photo { left: 37.6rem; right: 0.4rem; }
+.lc--photofirst .lc__photo { left: 0; width: 52.8rem; } .lc--photofirst .lc__lens { left: 53.6rem; right: 0; }
+.lc__name { position: absolute; left: 2.2rem; bottom: 1.6rem; font-family: "Poppins", sans-serif; font-size: 2.1rem; line-height: 3.5rem; color: #e6e6e6; }
+.lc__name small { display: block; font-family: "Pretendard", sans-serif; font-size: 2rem; color: #9a9a9a; }
+.lc__name i { font-style: normal; color: var(--main); }
+.lc__go { position: absolute; right: 1.6rem; bottom: 2.4rem; width: 5rem; height: 5rem; display: flex; align-items: center; justify-content: center; border: 1px solid #555; background: #1e1e1e; transition: background .2s, border-color .2s; }
+.lc__go svg { width: 1.3rem; height: 2.2rem; fill: none; stroke: #fff; stroke-width: 1.4; }
+.lc__lens:hover .lc__go { background: var(--main); border-color: var(--main); }
+
+/* 글래스 모드: 사진 위 유리판. 켜면 유리판 안쪽이 흐려지고 마우스를 따라 움직인다 */
+.lc__glass {
+  position: absolute; left: var(--gx, 50%); top: var(--gy, 50%);
+  width: 34rem; height: 29.6rem; transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(1.4rem); backdrop-filter: blur(1.4rem);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.28); border-radius: 0.6rem;
+  box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+  pointer-events: none;
+  transition: opacity .3s, left .12s linear, top .12s linear;
+}
+[data-glass].is-off .lc__glass { opacity: 0; }
+.lc--photofirst .lc__glass { width: 24rem; height: 31rem; }
+.lc__toggle {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  height: 2.9rem; padding: 0 1.1rem 0 1.1rem;
+  background: #fff; color: #222; border-radius: 1.5rem;
+  font-size: 1.15rem; font-weight: 500; letter-spacing: 0;
+  box-shadow: 4.2rem 0 0 -0.0rem transparent;
+  transition: background .2s, color .2s;
+}
+.lc--photofirst .lc__toggle { right: auto; left: 1.2rem; }
+.lc__toggle[aria-pressed="false"] { background: #3a3a3a; color: #bbb; }
+.amore { right: 15rem; top: 193.4rem; }
+
+/* 문장 + 큰 사진 */
+.history--atelier { left: 15.4rem; top: 221.9rem; width: 162rem; height: 45rem; }
+.history--atelier .history__text { top: 0; line-height: 7rem; }
+.history--atelier .l--a { padding-left: 67.3rem; }
+.history--atelier .l--b { padding-left: 11rem; }
+.history--atelier .l:nth-child(4) { margin-top: 3.2rem; }
+.abig { left: 14.7rem; top: 273.2rem; width: 162.2rem; height: 92.8rem; overflow: hidden; }
+.abig .lc__glass { width: 62rem; height: 46rem; }

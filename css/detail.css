@@ -1,0 +1,62 @@
+/* 제품 상세 다크 — 1rem = 디자인 10px. 원본 통이미지(2370px 폭)에서 잰 값을 1920 기준으로 환산했다. */
+@import url("atelier.css");
+.page-detail { background: #1c1c1c; }
+.page-detail .top--over .gnb { top: 3.7rem; }
+.dmain { position: relative; height: 277.7rem; background: #1c1c1c; color: #f1f1f1; }
+.dmain > section { position: absolute; }
+.dmain > .gridlines { position: absolute; }
+.dspec dl div { transition: background .25s, padding .25s; }
+.dspec dl div:hover { background: rgba(255,255,255,.04); padding-left: 1rem; }
+.dpanel { transition: background .4s; }
+.dpanel:hover { background: #3a3a3a; }
+
+.dpanel { left: 15rem; top: 21.1rem; width: 162rem; height: 87.8rem; background: #373737; border-radius: 1.6rem; overflow: hidden; }
+.dpanel__stage { position: absolute; left: 30.4rem; top: 3.2rem; width: 76.2rem; height: 61.6rem; }
+.dpanel__lens { transition: transform .6s cubic-bezier(.2,.7,.2,1), opacity .3s; }
+.dpanel__lens.is-swap { opacity: 0; transform: scale(.96) rotate(-3deg); }
+.dots { position: absolute; left: 0; right: 0; top: 62.6rem; display: flex; justify-content: center; gap: 0.8rem; }
+.dots button { width: 1rem; height: 1rem; border-radius: 50%; background: #e9e9e9; transition: background .2s, transform .2s; }
+.dots button.is-on { background: var(--main); }
+.dots button:hover { transform: scale(1.3); }
+.dpanel__info { position: absolute; left: 2.5rem; top: 72rem; }
+.dpanel__info h1 { font-size: 3.2rem; font-weight: 600; line-height: 4rem; letter-spacing: -0.02rem; }
+.dpanel__info em { font-style: normal; color: var(--main); }
+.dpanel__info p { margin-top: 1.6rem; font-size: 1.75rem; line-height: 2.65rem; color: #e2e2e2; white-space: nowrap; }
+.dpanel__buy { position: absolute; left: 87.2rem; top: 80.9rem; display: flex; gap: 1.2rem; }
+.btn-line--cart { width: 18.9rem; height: 4.5rem; padding: 0; color: #f1f1f1; border-color: #e0e0e0; }
+.btn-line--cart.is-in { background: #f1f1f1; color: #1c1c1c; }
+.btn-buy { display: inline-flex; align-items: center; justify-content: center; width: 27.8rem; height: 4.5rem; border-radius: 2.3rem; background: var(--main); color: #fff; font-size: 2rem; font-weight: 600; transition: background .2s; }
+.btn-buy:hover { background: #d40000; }
+.dticks { position: absolute; left: 134rem; top: 38.3rem; display: grid; gap: 1.95rem; }
+.dticks i { width: 0.8rem; height: 1px; background: #cfcfcf; }
+.dticks i.is-on { background: var(--main); }
+.dthumbs { position: absolute; left: 136.7rem; top: 0; width: 25.3rem; height: 100%; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.dthumbs li { position: absolute; left: 0; right: 0; overflow: hidden; cursor: pointer; }
+.dthumbs li.n { left: 1.6rem; right: 1.6rem; }
+.dthumbs li:nth-child(1) { top: 0.2rem; height: 6.4rem; }
+.dthumbs li:nth-child(2) { top: 7.7rem; height: 16.8rem; }
+.dthumbs li:nth-child(3) { top: 25.9rem; height: 27.6rem; }
+.dthumbs li:nth-child(4) { top: 54.5rem; height: 17.7rem; }
+.dthumbs li:nth-child(5) { top: 73.2rem; height: 14.5rem; }
+.dthumbs img { transition: transform .5s, filter .3s; }
+.dthumbs li:hover img { transform: scale(1.05); filter: brightness(1.15); }
+
+.dh { font-size: 3.2rem; font-weight: 400; line-height: 1; letter-spacing: 0; }
+.dh::after { content: ""; display: block; margin-top: 1.5rem; width: 1.5rem; height: 2px; background: var(--main); }
+.dtech { left: 15rem; top: 122.6rem; }
+.chips { margin-top: 1.9rem; }
+.chips li { display: flex; gap: 0.6rem; margin-bottom: 0.7rem; }
+.chips span { display: inline-flex; align-items: center; height: 4.4rem; padding: 0 1.6rem; background: #fff; color: #222; border-radius: 2.2rem; font-size: 1.8rem; transition: background .2s, color .2s; cursor: default; }
+.chips span:hover { background: var(--main); color: #fff; }
+.dspec { left: 96.9rem; top: 122.6rem; width: 68.5rem; }
+.dspec dl { margin: 1.9rem 0 0; border-top: 1px solid #5a5a5a; }
+.dspec dl div { display: flex; align-items: center; height: 6.7rem; border-bottom: 1px solid #5a5a5a; font-size: 2rem; }
+.dspec dt { width: 26.1rem; }
+.dspec dd { margin: 0; }
+.dmedia { left: 15rem; top: 197.2rem; width: 162rem; }
+.dmedia ul { margin-top: 1.7rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; height: 61.5rem; }
+.dmedia li { overflow: hidden; }
+.dmedia img { transition: transform .7s; }
+.dmedia li:hover img { transform: scale(1.04); }
+.toast { position: fixed; left: 50%; bottom: 4rem; transform: translate(-50%, 2rem); margin: 0; padding: 1.4rem 2.6rem; background: #fff; color: #111; border-radius: 3rem; font-size: 1.7rem; opacity: 0; pointer-events: none; transition: opacity .3s, transform .3s; z-index: 10; }
+.toast.is-on { opacity: 1; transform: translate(-50%, 0); }
